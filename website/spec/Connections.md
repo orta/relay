@@ -1,9 +1,14 @@
-Relay Cursor Connections Specification
+GraphQL Cursor Connections Specification
 --------------------------------------
 
-Relay's support for pagination relies on the GraphQL server exposing
-connections in a standardized way. In the query, the connection model
-provides a standard mechanism for slicing and paginating the result set.
+This specification aims to provide options for GraphQL clients to consistently 
+handle pagination with support for related metadata via a GraphQL server. This
+spec proposes calling them connections and treats pageable list in a standardized 
+way. 
+
+In the query, the connection model provides a standard mechanism for slicing 
+and paginating the result set.
+
 In the response, the connection model provides a standard way of providing
 cursors, and a way of telling the client when more results are available.
 
@@ -47,8 +52,8 @@ This section of the spec describes the formal requirements around connections.
 
 # Reserved Types
 
-A GraphQL Relay server must reserve certain types and type names
-to support the pagination model used by Relay. In particular, this spec creates
+A GraphQL server which conforms to this spec must reserve certain types and type names
+to support the pagination model of connections. In particular, this spec creates
 guidelines for the following types:
 
  - Any object whose name ends in "Connection".
@@ -56,7 +61,7 @@ guidelines for the following types:
 
 # Connection Types
 
-Any type whose name ends in "Connection" is considered by Relay
+Any type whose name ends in "Connection" is considered by this spec
 to be a *Connection Type*. Connection types must be an "Object"
 as defined in the "Type System" section of the GraphQL Specification.
 
@@ -143,7 +148,7 @@ returns
 # Edge Types
 
 A type that is returned in list form by a connection type's `edges` field
-is considered by Relay to be an *Edge Type*. Edge types must be an "Object"
+is considered by this spec to be an *Edge Type*. Edge types must be an "Object"
 as defined in the "Type System" section of the GraphQL Specification.
 
 ## Fields
@@ -173,7 +178,7 @@ Non-Null wrapper around a custom scalar that serializes as a String.
 Whatever type this field returns will be referred to as the *cursor type*
 in the rest of this spec.
 
-The result of this field is considered opaque by Relay, but will be passed
+The result of this field is considered opaque by the spec, but will be passed
 back to the server as described in the "Arguments" section below.
 
 ## Introspection
