@@ -373,7 +373,7 @@ becomes unclear. This is among the reasons that pagination with both `first` and
 `startCursor` and `endCursor` must be the cursors corresponding to the first and
 last nodes in `edges`, respectively.
 
-NOTE As this spec was created with Relay in mind, it's worth noting that 
+NOTE As this spec was created with Relay Classic in mind, it's worth noting that 
 Relay Legacy did not define `startCursor` and `endCursor`, and relied on
 selecting the `cursor` of each edge; Relay Modern began selecting
 `startCursor` and `endCursor` instead to save bandwidth (since it doesn't use any
