@@ -164,9 +164,9 @@ a Scalar, Enum, Object, Interface, Union, or a Non-Null wrapper around one of
 those types. Notably, this field *cannot* return a list.
 
 NOTE The naming echoes that of the "Node" interface and "node" root
-field as described in a later section of this spec. Relay can perform
-certain optimizations if this field returns an object that implements
-`Node`, however, this is not a strict requirement for use of Relay.
+field as described in a later section of this spec. Spec-compliant clients 
+can perform certain optimizations if this field returns an object that implements
+`Node`, however, this is not a strict requirement for conforming.
 
 ### Cursor
 
@@ -373,7 +373,8 @@ becomes unclear. This is among the reasons that pagination with both `first` and
 `startCursor` and `endCursor` must be the cursors corresponding to the first and
 last nodes in `edges`, respectively.
 
-NOTE Relay Legacy did not define `startCursor` and `endCursor`, and relied on
+NOTE As this spec was created with Relay in mind, it's worth noting that 
+Relay Legacy did not define `startCursor` and `endCursor`, and relied on
 selecting the `cursor` of each edge; Relay Modern began selecting
 `startCursor` and `endCursor` instead to save bandwidth (since it doesn't use any
 cursors in between).

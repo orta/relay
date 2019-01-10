@@ -304,12 +304,12 @@ their requirements are described below.
 ## Fields
 
 A server compliant with this spec may expose root fields that accept a list of input
-arguments, and returns a list of responses. For Relay to use these fields,
+arguments, and returns a list of responses. For spec-compliant clients to use these fields,
 these fields must be *plural identifying root fields*, and obey the following
 requirements.
 
-NOTE Relay-compliant servers may expose root fields that are not *plural
-identifying root fields*; the Relay client will just be unable to use those
+NOTE Spec-compliant servers may expose root fields that are not *plural
+identifying root fields*; the spec-compliant client will just be unable to use those
 fields as root fields in its queries.
 
 *Plural identifying root fields* must have a single argument. The type of that
