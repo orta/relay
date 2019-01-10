@@ -1,7 +1,7 @@
 GraphQL Cursor Connections Specification
 --------------------------------------
 
-This specification aims to provide options for GraphQL clients to consistently 
+This specification aims to provide an option for GraphQL clients to consistently 
 handle pagination with support for related metadata via a GraphQL server. This
 spec proposes calling them connections and treats pageable list in a standardized 
 way. 
