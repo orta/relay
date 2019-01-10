@@ -178,7 +178,7 @@ Non-Null wrapper around a custom scalar that serializes as a String.
 Whatever type this field returns will be referred to as the *cursor type*
 in the rest of this spec.
 
-The result of this field is considered opaque by the spec, but will be passed
+The result of this field should be considered opaque by the client, but will be passed
 back to the server as described in the "Arguments" section below.
 
 ## Introspection
